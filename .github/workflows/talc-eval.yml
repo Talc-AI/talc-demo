@@ -1,5 +1,5 @@
 name:
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Talc Evals for ${{ github.actor }} - ${{ github.event_name }} - ${{ github.sha }}
 on: [push]
 jobs:
   Test-Talc-AI:
