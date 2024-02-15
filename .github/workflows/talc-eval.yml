@@ -18,4 +18,4 @@ jobs:
       - name: Run tests
         env:
           TALC_API_KEY: ${{ secrets.TALC_API_KEY }}
-        run: talc upload-and-grade --csv demo_answers.csv --name "Demo test run"
+        run: talc upload-and-grade --csv demo_answers.csv --name "Demo test run" --fail_on_error
