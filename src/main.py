@@ -5,8 +5,9 @@ from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain_openai import OpenAI
 import os
+import csv
 
-reader = PdfReader("../knowledge_base/combustion.pdf")
+reader = PdfReader("./knowledge_base/combustion.pdf")
 
 raw_text = ""
 for i, page in enumerate(reader.pages):
@@ -32,11 +33,24 @@ def prompt_user():
     return prompt
 
 
-while True:
-    query = prompt_user()
-    if query.lower() == "exit":
-        break
+# Load test set from csv
+test_set = []
+with open("./artifacts/test_set.csv") as f:
+    reader = csv.DictReader(f)
+    for row in reader:
+        test_set.append(row)
 
+output = []
+# Run the test set
+for row in test_set:
+    query = row["question"]
     docs = docsearch.similarity_search(query)
     response = chain.invoke({"input_documents": docs, "question": query})
     print(response["output_text"])
+    row["user_answer"] = response["output_text"]
+
+# write the output to a csv
+with open("./artifacts/output.csv", "w") as f:
+    writer = csv.DictWriter(f, fieldnames=test_set[0].keys())
+    writer.writeheader()
+    writer.writerows(test_set)
