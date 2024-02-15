@@ -1,4 +1,4 @@
-id,question,expected_response,user_answer
+id,question,expected_answer,user_answer
 c3a04538-6f32-451e-ba13-9643a323c9a0,At what mileage or month interval is it recommended to replace the spark plugs?,"At 40,000 miles or 48 months."," The recommended interval for spark plug replacement is every 50,000 miles or 60 months, as stated in the context above."
 02da9bfb-e99a-4e90-b70d-b91bba57691e,"What should be done to the HV battery cooling intake filter every 5,000 miles?",Visually check the HV battery cooling intake filter for dirt or dust and clean if necessary," The HV battery cooling intake filter should be inspected and replaced if necessary every 5,000 miles."
 62462b63-994d-4125-8d0f-17b1090e10fb,What is recommended by Toyota to ensure optimum performance and maintain the quality of the vehicle's emission control systems?,Toyota recommends the use of Toyota Genuine Parts when servicing or repairing the vehicle's emission control systems., Toyota recommends the use of Toyota Genuine Parts when servicing or repairing the systems.
