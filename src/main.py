@@ -48,7 +48,7 @@ for row in test_set:
     response = chain.invoke({"input_documents": docs, "question": query})
     print(response["output_text"])
     row["expected_answer"] = row["expected_response"]
-    row["user_answer"] = response["output_text"]
+    row["result"] = response["output_text"]
 
 # write the output to a csv
 with open("./artifacts/output.csv", "w") as f:
