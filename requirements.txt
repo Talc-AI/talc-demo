@@ -49,7 +49,7 @@ storage3==0.7.0
 StrEnum==0.4.15
 supabase==2.3.4
 supafunc==0.3.3
-talc==0.1.16
+talc==0.1.17
 tenacity==8.2.3
 tiktoken==0.6.0
 tqdm==4.66.2
