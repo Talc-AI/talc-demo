@@ -22,4 +22,4 @@ jobs:
       - name: grade tests
         env:
           TALC_API_KEY: ${{ secrets.TALC_API_KEY }}
-        run: python ./src/talc_test_run.py
+        run: python talc_test_run.py
