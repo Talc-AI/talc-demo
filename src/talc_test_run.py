@@ -30,3 +30,4 @@ participation in an election
 ---------------------------------------------
 """
 )
+sys.exit(1)
