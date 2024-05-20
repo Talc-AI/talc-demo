@@ -6,7 +6,7 @@ Progress: 100.0%
 ============================================================
 Grading complete.
 Grader configs:
-DefaultAccuracy: 63%
+DefaultAccuracy: 83%
 VotingLogisticsConfig: 100.0%
 CovidMisinformationConfig: 100.0%
 
@@ -30,4 +30,4 @@ participation in an election
 ---------------------------------------------
 """
 )
-sys.exit(1)
+exit(1)
