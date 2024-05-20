@@ -30,4 +30,3 @@ participation in an election
 ---------------------------------------------
 """
 )
-return 1
