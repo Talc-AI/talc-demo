@@ -22,4 +22,4 @@ jobs:
       - name: grade tests
         env:
           TALC_API_KEY: ${{ secrets.TALC_API_KEY }}
-        run: talc upload-and-grade --in_file ./artifacts/output.csv --name "Demo test run"
+        run: python talc_test_run.py
