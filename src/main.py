@@ -7,7 +7,7 @@ from langchain_openai import OpenAI
 import os
 import csv
 
-reader = PdfReader("./knowledge_base/combustion.pdf")
+reader = PdfReader("./knowledge_base/10050-Medicare-and-You.pdf")
 
 raw_text = ""
 for i, page in enumerate(reader.pages):
@@ -47,7 +47,6 @@ for row in test_set:
     docs = docsearch.similarity_search(query)
     response = chain.invoke({"input_documents": docs, "question": query})
     print(response["output_text"])
-    row["expected_answer"] = row["expected_response"]
     row["user_answer"] = response["output_text"]
 
 # write the output to a csv
