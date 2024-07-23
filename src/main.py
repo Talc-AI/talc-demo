@@ -7,7 +7,7 @@ from langchain_openai import OpenAI
 import os
 import csv
 
-reader = PdfReader("./knowledge_base/combustion.pdf")
+reader = PdfReader("./knowledge_base/10050-Medicare-and-You.pdf")
 
 raw_text = ""
 for i, page in enumerate(reader.pages):
